@@ -1,0 +1,5548 @@
+
+class Pound(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 1
+        
+        self.type = NORMAL
+        self.damage = 40
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 35
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class KarateChop(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 2
+        
+        self.type = FIGHTING
+        self.damage = 50
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 1
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class DoubleSlap(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 3
+        
+        self.type = NORMAL
+        self.damage = 15
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 85
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 5
+        self.min_hits = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class CometPunch(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 4
+        
+        self.type = NORMAL
+        self.damage = 18
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 85
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 5
+        self.min_hits = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class MegaPunch(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 5
+        
+        self.type = NORMAL
+        self.damage = 80
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 85
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class PayDay(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 6
+        
+        self.type = NORMAL
+        self.damage = 40
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class FirePunch(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 7
+        
+        self.type = FIRE
+        self.damage = 75
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Burn
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class IcePunch(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 8
+        
+        self.type = ICE
+        self.damage = 75
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Freeze
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class ThunderPunch(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 9
+        
+        self.type = ELECTRIC
+        self.damage = 75
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Paralysis
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Scratch(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 10
+        
+        self.type = NORMAL
+        self.damage = 40
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 35
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class ViceGrip(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 11
+        
+        self.type = NORMAL
+        self.damage = 55
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Guillotine(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 12
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 30
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ohko
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class RazorWind(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 13
+        
+        self.type = NORMAL
+        self.damage = 80
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 1
+        
+        self.category = Damage
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SwordsDance(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 14
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=2, stat="attack")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Cut(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 15
+        
+        self.type = NORMAL
+        self.damage = 50
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 95
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Gust(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 16
+        
+        self.type = FLYING
+        self.damage = 40
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 35
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class WingAttack(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 17
+        
+        self.type = FLYING
+        self.damage = 60
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 35
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Whirlwind(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 18
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = -6
+        self.critical_level = 0
+        
+        self.category = ForceSwitch
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Fly(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 19
+        
+        self.type = FLYING
+        self.damage = 90
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 95
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Bind(Movement, DamageMovement, TurnsMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 20
+        
+        self.type = NORMAL
+        self.damage = 15
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 85
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 6
+        self.min_turns = 5
+        
+        
+        self.ailment_chance = 100
+        self.ailment = Trap
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Slam(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 21
+        
+        self.type = NORMAL
+        self.damage = 80
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 75
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class VineWhip(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 22
+        
+        self.type = GRASS
+        self.damage = 45
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Stomp(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 23
+        
+        self.type = NORMAL
+        self.damage = 65
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 30
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class DoubleKick(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 24
+        
+        self.type = FIGHTING
+        self.damage = 30
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 2
+        self.min_hits = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class MegaKick(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 25
+        
+        self.type = NORMAL
+        self.damage = 120
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 75
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class JumpKick(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 26
+        
+        self.type = FIGHTING
+        self.damage = 100
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 95
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class RollingKick(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 27
+        
+        self.type = FIGHTING
+        self.damage = 60
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 85
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 30
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SandAttack(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 28
+        
+        self.type = GROUND
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 100
+        self.stat_change = [
+            StateChangeField(change=-1, stat="accuracy")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Headbutt(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 29
+        
+        self.type = NORMAL
+        self.damage = 70
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 30
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class HornAttack(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 30
+        
+        self.type = NORMAL
+        self.damage = 65
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class FuryAttack(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 31
+        
+        self.type = NORMAL
+        self.damage = 15
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 85
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 5
+        self.min_hits = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class HornDrill(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 32
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 30
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ohko
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Tackle(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 33
+        
+        self.type = NORMAL
+        self.damage = 40
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 35
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class BodySlam(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 34
+        
+        self.type = NORMAL
+        self.damage = 85
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 30
+        self.ailment = Paralysis
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Wrap(Movement, DamageMovement, TurnsMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 35
+        
+        self.type = NORMAL
+        self.damage = 15
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 6
+        self.min_turns = 5
+        
+        
+        self.ailment_chance = 100
+        self.ailment = Trap
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class TakeDown(Movement, DamageMovement, DrainMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 36
+        
+        self.type = NORMAL
+        self.damage = 90
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 85
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.drain = -25
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Thrash(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 37
+        
+        self.type = NORMAL
+        self.damage = 120
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = RandomOpponent
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class DoubleEdge(Movement, DamageMovement, DrainMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 38
+        
+        self.type = NORMAL
+        self.damage = 120
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.drain = -33
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class TailWhip(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 39
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 100
+        self.stat_change = [
+            StateChangeField(change=-1, stat="defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class PoisonSting(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 40
+        
+        self.type = POISON
+        self.damage = 15
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 35
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 30
+        self.ailment = Poison
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Twineedle(Movement, DamageMovement, HitsMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 41
+        
+        self.type = BUG
+        self.damage = 25
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 2
+        self.min_hits = 2
+        
+        
+        self.ailment_chance = 20
+        self.ailment = Poison
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class PinMissile(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 42
+        
+        self.type = BUG
+        self.damage = 25
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 95
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 5
+        self.min_hits = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Leer(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 43
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 100
+        self.stat_change = [
+            StateChangeField(change=-1, stat="defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Bite(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 44
+        
+        self.type = DARK
+        self.damage = 60
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 30
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Growl(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 45
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 40
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 100
+        self.stat_change = [
+            StateChangeField(change=-1, stat="attack")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Roar(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 46
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = -6
+        self.critical_level = 0
+        
+        self.category = ForceSwitch
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Sing(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 47
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 55
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 4
+        self.min_turns = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Supersonic(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 48
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 55
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 5
+        self.min_turns = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SonicBoom(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 49
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 90
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Disable(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 50
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 4
+        self.min_turns = 4
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Acid(Movement, DamageMovement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 51
+        
+        self.type = POISON
+        self.damage = 40
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageLower
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 10
+        self.stat_change = [
+            StateChangeField(change=-1, stat="special-defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Ember(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 52
+        
+        self.type = FIRE
+        self.damage = 40
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Burn
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Flamethrower(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 53
+        
+        self.type = FIRE
+        self.damage = 90
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Burn
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Mist(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 54
+        
+        self.type = ICE
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = FieldEffect
+        self.target = UsersField
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class WaterGun(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 55
+        
+        self.type = WATER
+        self.damage = 40
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class HydroPump(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 56
+        
+        self.type = WATER
+        self.damage = 110
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 80
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Surf(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 57
+        
+        self.type = WATER
+        self.damage = 90
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = AllOtherPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class IceBeam(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 58
+        
+        self.type = ICE
+        self.damage = 90
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Freeze
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Blizzard(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 59
+        
+        self.type = ICE
+        self.damage = 110
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 70
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Freeze
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Psybeam(Movement, DamageMovement, TurnsMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 60
+        
+        self.type = PSYCHIC
+        self.damage = 65
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 5
+        self.min_turns = 2
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Confusion
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class BubbleBeam(Movement, DamageMovement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 61
+        
+        self.type = WATER
+        self.damage = 65
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageLower
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 10
+        self.stat_change = [
+            StateChangeField(change=-1, stat="speed")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class AuroraBeam(Movement, DamageMovement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 62
+        
+        self.type = ICE
+        self.damage = 65
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageLower
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 10
+        self.stat_change = [
+            StateChangeField(change=-1, stat="attack")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class HyperBeam(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 63
+        
+        self.type = NORMAL
+        self.damage = 150
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 90
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Peck(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 64
+        
+        self.type = FLYING
+        self.damage = 35
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 35
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class DrillPeck(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 65
+        
+        self.type = FLYING
+        self.damage = 80
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Submission(Movement, DamageMovement, DrainMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 66
+        
+        self.type = FIGHTING
+        self.damage = 80
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 80
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.drain = -25
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class LowKick(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 67
+        
+        self.type = FIGHTING
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Counter(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 68
+        
+        self.type = FIGHTING
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = -5
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SpecificMove
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SeismicToss(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 69
+        
+        self.type = FIGHTING
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Strength(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 70
+        
+        self.type = NORMAL
+        self.damage = 80
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Absorb(Movement, DamageMovement, DrainMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 71
+        
+        self.type = GRASS
+        self.damage = 20
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageHeal
+        self.target = SelectedPokemon
+        
+        self.drain = 50
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class MegaDrain(Movement, DamageMovement, DrainMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 72
+        
+        self.type = GRASS
+        self.damage = 40
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageHeal
+        self.target = SelectedPokemon
+        
+        self.drain = 50
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class LeechSeed(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 73
+        
+        self.type = GRASS
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 90
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Growth(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 74
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=1, stat="attack")
+            , 
+            StateChangeField(change=1, stat="special-attack")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class RazorLeaf(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 75
+        
+        self.type = GRASS
+        self.damage = 55
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 95
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 1
+        
+        self.category = Damage
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SolarBeam(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 76
+        
+        self.type = GRASS
+        self.damage = 120
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class PoisonPowder(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 77
+        
+        self.type = POISON
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 75
+        self.power_points = 35
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class StunSpore(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 78
+        
+        self.type = GRASS
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 75
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SleepPowder(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 79
+        
+        self.type = GRASS
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 75
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 4
+        self.min_turns = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class PetalDance(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 80
+        
+        self.type = GRASS
+        self.damage = 120
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = RandomOpponent
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class StringShot(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 81
+        
+        self.type = BUG
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 95
+        self.power_points = 40
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 95
+        self.stat_change = [
+            StateChangeField(change=-2, stat="speed")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class DragonRage(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 82
+        
+        self.type = DRAGON
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class FireSpin(Movement, DamageMovement, TurnsMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 83
+        
+        self.type = FIRE
+        self.damage = 35
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 85
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 6
+        self.min_turns = 5
+        
+        
+        self.ailment_chance = 100
+        self.ailment = Trap
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class ThunderShock(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 84
+        
+        self.type = ELECTRIC
+        self.damage = 40
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Paralysis
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Thunderbolt(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 85
+        
+        self.type = ELECTRIC
+        self.damage = 90
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Paralysis
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class ThunderWave(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 86
+        
+        self.type = ELECTRIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 90
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Thunder(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 87
+        
+        self.type = ELECTRIC
+        self.damage = 110
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 70
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 30
+        self.ailment = Paralysis
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class RockThrow(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 88
+        
+        self.type = ROCK
+        self.damage = 50
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Earthquake(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 89
+        
+        self.type = GROUND
+        self.damage = 100
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = AllOtherPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Fissure(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 90
+        
+        self.type = GROUND
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 30
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ohko
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Dig(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 91
+        
+        self.type = GROUND
+        self.damage = 80
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Toxic(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 92
+        
+        self.type = POISON
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 90
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 15
+        self.min_turns = 15
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Confusion(Movement, DamageMovement, TurnsMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 93
+        
+        self.type = PSYCHIC
+        self.damage = 50
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 5
+        self.min_turns = 2
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Confusion
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Psychic(Movement, DamageMovement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 94
+        
+        self.type = PSYCHIC
+        self.damage = 90
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageLower
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 10
+        self.stat_change = [
+            StateChangeField(change=-1, stat="special-defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Hypnosis(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 95
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 60
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 4
+        self.min_turns = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Meditate(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 96
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 40
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=1, stat="attack")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Agility(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 97
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=2, stat="speed")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class QuickAttack(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 98
+        
+        self.type = NORMAL
+        self.damage = 40
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 1
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Rage(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 99
+        
+        self.type = NORMAL
+        self.damage = 20
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Teleport(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 100
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = -6
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class NightShade(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 101
+        
+        self.type = GHOST
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Mimic(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 102
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Screech(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 103
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 85
+        self.power_points = 40
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 85
+        self.stat_change = [
+            StateChangeField(change=-2, stat="defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class DoubleTeam(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 104
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=1, stat="evasion")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Recover(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 105
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Heal
+        self.target = User
+        
+        self.healing = 50
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Harden(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 106
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=1, stat="defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Minimize(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 107
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=2, stat="evasion")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Smokescreen(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 108
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 100
+        self.stat_change = [
+            StateChangeField(change=-1, stat="accuracy")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class ConfuseRay(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 109
+        
+        self.type = GHOST
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 5
+        self.min_turns = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Withdraw(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 110
+        
+        self.type = WATER
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 40
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=1, stat="defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class DefenseCurl(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 111
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 40
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=1, stat="defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Barrier(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 112
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=2, stat="defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class LightScreen(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 113
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = FieldEffect
+        self.target = UsersField
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Haze(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 114
+        
+        self.type = ICE
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = WholeFieldEffect
+        self.target = EntireField
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Reflect(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 115
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = FieldEffect
+        self.target = UsersField
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class FocusEnergy(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 116
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Bide(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 117
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 1
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Metronome(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 118
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class MirrorMove(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 119
+        
+        self.type = FLYING
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SelfDestruct(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 120
+        
+        self.type = NORMAL
+        self.damage = 200
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = AllOtherPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class EggBomb(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 121
+        
+        self.type = NORMAL
+        self.damage = 100
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 75
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Lick(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 122
+        
+        self.type = GHOST
+        self.damage = 30
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 30
+        self.ailment = Paralysis
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Smog(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 123
+        
+        self.type = POISON
+        self.damage = 30
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 70
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 40
+        self.ailment = Poison
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Sludge(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 124
+        
+        self.type = POISON
+        self.damage = 65
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 30
+        self.ailment = Poison
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class BoneClub(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 125
+        
+        self.type = GROUND
+        self.damage = 65
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 85
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 10
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class FireBlast(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 126
+        
+        self.type = FIRE
+        self.damage = 110
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 85
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Burn
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Waterfall(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 127
+        
+        self.type = WATER
+        self.damage = 80
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 20
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Clamp(Movement, DamageMovement, TurnsMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 128
+        
+        self.type = WATER
+        self.damage = 35
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 85
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 6
+        self.min_turns = 5
+        
+        
+        self.ailment_chance = 100
+        self.ailment = Trap
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Swift(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 129
+        
+        self.type = NORMAL
+        self.damage = 60
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SkullBash(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 130
+        
+        self.type = NORMAL
+        self.damage = 130
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 100
+        self.ailment = None
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SpikeCannon(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 131
+        
+        self.type = NORMAL
+        self.damage = 20
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 5
+        self.min_hits = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Constrict(Movement, DamageMovement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 132
+        
+        self.type = NORMAL
+        self.damage = 10
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 35
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageLower
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 10
+        self.stat_change = [
+            StateChangeField(change=-1, stat="speed")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Amnesia(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 133
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=2, stat="special-defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Kinesis(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 134
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 80
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 80
+        self.stat_change = [
+            StateChangeField(change=-1, stat="accuracy")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SoftBoiled(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 135
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Heal
+        self.target = User
+        
+        self.healing = 50
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class HighJumpKick(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 136
+        
+        self.type = FIGHTING
+        self.damage = 130
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Glare(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 137
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class DreamEater(Movement, DamageMovement, DrainMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 138
+        
+        self.type = PSYCHIC
+        self.damage = 100
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageHeal
+        self.target = SelectedPokemon
+        
+        self.drain = 50
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class PoisonGas(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 139
+        
+        self.type = POISON
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 90
+        self.power_points = 40
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Barrage(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 140
+        
+        self.type = NORMAL
+        self.damage = 15
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 85
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 5
+        self.min_hits = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class LeechLife(Movement, DamageMovement, DrainMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 141
+        
+        self.type = BUG
+        self.damage = 80
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageHeal
+        self.target = SelectedPokemon
+        
+        self.drain = 50
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class LovelyKiss(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 142
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 75
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 4
+        self.min_turns = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SkyAttack(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 143
+        
+        self.type = FLYING
+        self.damage = 140
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 1
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 30
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Transform(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 144
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Bubble(Movement, DamageMovement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 145
+        
+        self.type = WATER
+        self.damage = 40
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageLower
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 10
+        self.stat_change = [
+            StateChangeField(change=-1, stat="speed")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class DizzyPunch(Movement, DamageMovement, TurnsMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 146
+        
+        self.type = NORMAL
+        self.damage = 70
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 5
+        self.min_turns = 2
+        
+        
+        self.ailment_chance = 20
+        self.ailment = Confusion
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Spore(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 147
+        
+        self.type = GRASS
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 4
+        self.min_turns = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Flash(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 148
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 100
+        self.stat_change = [
+            StateChangeField(change=-1, stat="accuracy")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Psywave(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 149
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Splash(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 150
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 40
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class AcidArmor(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 151
+        
+        self.type = POISON
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=2, stat="defense")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Crabhammer(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 152
+        
+        self.type = WATER
+        self.damage = 100
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 1
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Explosion(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 153
+        
+        self.type = NORMAL
+        self.damage = 250
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = AllOtherPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class FurySwipes(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 154
+        
+        self.type = NORMAL
+        self.damage = 18
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 80
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 5
+        self.min_hits = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Bonemerang(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 155
+        
+        self.type = GROUND
+        self.damage = 50
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 2
+        self.min_hits = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Rest(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 156
+        
+        self.type = PSYCHIC
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class RockSlide(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 157
+        
+        self.type = ROCK
+        self.damage = 75
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = AllOpponents
+        
+        self.flinch_chance = 30
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class HyperFang(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 158
+        
+        self.type = NORMAL
+        self.damage = 80
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 10
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Sharpen(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 159
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = None
+        self.stat_change = [
+            StateChangeField(change=1, stat="attack")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Conversion(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 160
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class TriAttack(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 161
+        
+        self.type = NORMAL
+        self.damage = 80
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 20
+        self.ailment = Unknown
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SuperFang(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 162
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Slash(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 163
+        
+        self.type = NORMAL
+        self.damage = 70
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 1
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Substitute(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 164
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Struggle(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 165
+        
+        self.type = NORMAL
+        self.damage = 50
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = None
+        self.power_points = 1
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = RandomOpponent
+        
+        self.healing = -25
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Sketch(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 166
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 1
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class TripleKick(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 167
+        
+        self.type = FIGHTING
+        self.damage = 10
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 3
+        self.min_hits = 3
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Thief(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 168
+        
+        self.type = DARK
+        self.damage = 60
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SpiderWeb(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 169
+        
+        self.type = BUG
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class MindReader(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 170
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Nightmare(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 171
+        
+        self.type = GHOST
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class FlameWheel(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 172
+        
+        self.type = FIRE
+        self.damage = 60
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Burn
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Snore(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 173
+        
+        self.type = NORMAL
+        self.damage = 50
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 30
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Curse(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 174
+        
+        self.type = GHOST
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SpecificMove
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Flail(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 175
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Conversion2(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 176
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 30
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Aeroblast(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 177
+        
+        self.type = FLYING
+        self.damage = 100
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 95
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 1
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class CottonSpore(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 178
+        
+        self.type = GRASS
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 40
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 100
+        self.stat_change = [
+            StateChangeField(change=-2, stat="speed")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Reversal(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 179
+        
+        self.type = FIGHTING
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Spite(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 180
+        
+        self.type = GHOST
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class PowderSnow(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 181
+        
+        self.type = ICE
+        self.damage = 40
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 25
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 10
+        self.ailment = Freeze
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Protect(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 182
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 4
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class MachPunch(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 183
+        
+        self.type = FIGHTING
+        self.damage = 40
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 100
+        self.power_points = 30
+        
+        self.priority = 1
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class ScaryFace(Movement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 184
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = NetGoodStats
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 100
+        self.stat_change = [
+            StateChangeField(change=-2, stat="speed")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class FeintAttack(Movement, DamageMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 185
+        
+        self.type = DARK
+        self.damage = 60
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SweetKiss(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 186
+        
+        self.type = FAIRY
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = 75
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 5
+        self.min_turns = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class BellyDrum(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 187
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class SludgeBomb(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 188
+        
+        self.type = POISON
+        self.damage = 90
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 30
+        self.ailment = Poison
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class MudSlap(Movement, DamageMovement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 189
+        
+        self.type = GROUND
+        self.damage = 20
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 100
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageLower
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 100
+        self.stat_change = [
+            StateChangeField(change=-1, stat="accuracy")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Octazooka(Movement, DamageMovement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 190
+        
+        self.type = WATER
+        self.damage = 65
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 85
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageLower
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 50
+        self.stat_change = [
+            StateChangeField(change=-1, stat="accuracy")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Spikes(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 191
+        
+        self.type = GROUND
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 20
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = FieldEffect
+        self.target = OpponentsField
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class ZapCannon(Movement, DamageMovement, AilmentMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 192
+        
+        self.type = ELECTRIC
+        self.damage = 120
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 50
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageAilment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.ailment_chance = 100
+        self.ailment = Paralysis
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Foresight(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 193
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 40
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class DestinyBond(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 194
+        
+        self.type = GHOST
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class PerishSong(Movement, TurnsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 195
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Ailment
+        self.target = AllPokemon
+        
+        self.flinch_chance = 0
+        
+
+        self.max_turns = 4
+        self.min_turns = 4
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class IcyWind(Movement, DamageMovement, StateChangeMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 196
+        
+        self.type = ICE
+        self.damage = 55
+        self.base = MOVEMENT_BASE_SPECIAL
+        self.accuracy = 95
+        self.power_points = 15
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = DamageLower
+        self.target = AllOpponents
+        
+        self.flinch_chance = 0
+        
+        
+        self.stat_chance = 100
+        self.stat_change = [
+            StateChangeField(change=-1, stat="speed")
+            ]
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class Detect(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 197
+        
+        self.type = FIGHTING
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 5
+        
+        self.priority = 4
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = User
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class BoneRush(Movement, DamageMovement, HitsMovement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 198
+        
+        self.type = GROUND
+        self.damage = 25
+        self.base = MOVEMENT_BASE_PHYSICAL
+        self.accuracy = 90
+        self.power_points = 10
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Damage
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+        
+        self.max_hits = 5
+        self.min_hits = 2
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        
+class LockOn(Movement):
+
+    def __init__(self):
+        self.name = self.__class__.__name__
+        self.external_id = 199
+        
+        self.type = NORMAL
+        self.base = MOVEMENT_BASE_STATUS
+        self.accuracy = None
+        self.power_points = 5
+        
+        self.priority = 0
+        self.critical_level = 0
+        
+        self.category = Unique
+        self.target = SelectedPokemon
+        
+        self.flinch_chance = 0
+        
+
+    def effect(self, attacker: Pokemon, defender: Pokemon):
+        pass
+
+
+        

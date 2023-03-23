@@ -1,0 +1,211 @@
+from src.core.pokemon import Pokemon
+from abc import ABC, abstractmethod
+
+
+class Ailment(ABC):
+    chance: int
+    name: str
+
+    @abstractmethod
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Paralysis(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Paralysis"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Sleep(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Sleep"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Freeze(Ailment):
+
+    def __init__(self, chance: int):
+        super().__init__(chance)
+        self.name = "Freeze"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Burn(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Burn"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Poison(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Poison"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Confusion(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Confusion"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Infatuation(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Infatuation"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Trap(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Trap"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Nightmare(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Nightmare"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Torment(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Torment"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Disable(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Disable"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Yawn(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Yawn"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class HealBlock(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Heal Block"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class NoTypeImmunity(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "No Type Immunity"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class LeechSeed(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Leech Seed"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Embargo(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Embargo"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class PerishSong(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Perish Song"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Ingrain(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Ingrain"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class Silence(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Silence"
+
+    def execute(self, defender: Pokemon):
+        pass
+
+
+class TarShot(Ailment):
+
+    def __init__(self, chance: int):
+        self.chance = chance
+        self.name = "Tar Shot"
+
+    def execute(self, defender: Pokemon):
+        pass
